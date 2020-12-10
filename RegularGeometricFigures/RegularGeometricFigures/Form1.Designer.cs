@@ -30,24 +30,28 @@ namespace RegularGeometricFigures
         private void InitializeComponent()
         {
             this.grbInput = new System.Windows.Forms.GroupBox();
-            this.lblSize = new System.Windows.Forms.Label();
             this.txtSize = new System.Windows.Forms.TextBox();
+            this.lblSize = new System.Windows.Forms.Label();
             this.grbNSides = new System.Windows.Forms.GroupBox();
             this.tkbSides = new System.Windows.Forms.TrackBar();
             this.grbSolution = new System.Windows.Forms.GroupBox();
-            this.lblArea = new System.Windows.Forms.Label();
-            this.lblPerimeter = new System.Windows.Forms.Label();
-            this.txtPerimeter = new System.Windows.Forms.TextBox();
             this.txtArea = new System.Windows.Forms.TextBox();
+            this.txtPerimeter = new System.Windows.Forms.TextBox();
+            this.lblPerimeter = new System.Windows.Forms.Label();
+            this.lblArea = new System.Windows.Forms.Label();
             this.grbCanvas = new System.Windows.Forms.GroupBox();
             this.picCanvas = new System.Windows.Forms.PictureBox();
             this.btnCalculate = new System.Windows.Forms.Button();
+            this.grbButtons = new System.Windows.Forms.GroupBox();
+            this.btnRestart = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.grbInput.SuspendLayout();
             this.grbNSides.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tkbSides)).BeginInit();
             this.grbSolution.SuspendLayout();
             this.grbCanvas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).BeginInit();
+            this.grbButtons.SuspendLayout();
             this.SuspendLayout();
             // 
             // grbInput
@@ -61,6 +65,13 @@ namespace RegularGeometricFigures
             this.grbInput.TabStop = false;
             this.grbInput.Text = "Input";
             // 
+            // txtSize
+            // 
+            this.txtSize.Location = new System.Drawing.Point(41, 20);
+            this.txtSize.Name = "txtSize";
+            this.txtSize.Size = new System.Drawing.Size(100, 20);
+            this.txtSize.TabIndex = 1;
+            // 
             // lblSize
             // 
             this.lblSize.AutoSize = true;
@@ -69,13 +80,6 @@ namespace RegularGeometricFigures
             this.lblSize.Size = new System.Drawing.Size(27, 13);
             this.lblSize.TabIndex = 0;
             this.lblSize.Text = "Size";
-            // 
-            // txtSize
-            // 
-            this.txtSize.Location = new System.Drawing.Point(41, 20);
-            this.txtSize.Name = "txtSize";
-            this.txtSize.Size = new System.Drawing.Size(100, 20);
-            this.txtSize.TabIndex = 1;
             // 
             // grbNSides
             // 
@@ -97,6 +101,7 @@ namespace RegularGeometricFigures
             this.tkbSides.TabIndex = 0;
             this.tkbSides.TickStyle = System.Windows.Forms.TickStyle.Both;
             this.tkbSides.Value = 3;
+            this.tkbSides.ValueChanged += new System.EventHandler(this.tkbSides_ValueChanged);
             // 
             // grbSolution
             // 
@@ -111,14 +116,19 @@ namespace RegularGeometricFigures
             this.grbSolution.TabStop = false;
             this.grbSolution.Text = "Solution";
             // 
-            // lblArea
+            // txtArea
             // 
-            this.lblArea.AutoSize = true;
-            this.lblArea.Location = new System.Drawing.Point(7, 16);
-            this.lblArea.Name = "lblArea";
-            this.lblArea.Size = new System.Drawing.Size(35, 13);
-            this.lblArea.TabIndex = 2;
-            this.lblArea.Text = "Area :";
+            this.txtArea.Location = new System.Drawing.Point(72, 16);
+            this.txtArea.Name = "txtArea";
+            this.txtArea.Size = new System.Drawing.Size(100, 20);
+            this.txtArea.TabIndex = 5;
+            // 
+            // txtPerimeter
+            // 
+            this.txtPerimeter.Location = new System.Drawing.Point(72, 42);
+            this.txtPerimeter.Name = "txtPerimeter";
+            this.txtPerimeter.Size = new System.Drawing.Size(100, 20);
+            this.txtPerimeter.TabIndex = 4;
             // 
             // lblPerimeter
             // 
@@ -129,26 +139,21 @@ namespace RegularGeometricFigures
             this.lblPerimeter.TabIndex = 3;
             this.lblPerimeter.Text = "Perimeter :";
             // 
-            // txtPerimeter
+            // lblArea
             // 
-            this.txtPerimeter.Location = new System.Drawing.Point(72, 42);
-            this.txtPerimeter.Name = "txtPerimeter";
-            this.txtPerimeter.Size = new System.Drawing.Size(100, 20);
-            this.txtPerimeter.TabIndex = 4;
-            // 
-            // txtArea
-            // 
-            this.txtArea.Location = new System.Drawing.Point(72, 16);
-            this.txtArea.Name = "txtArea";
-            this.txtArea.Size = new System.Drawing.Size(100, 20);
-            this.txtArea.TabIndex = 5;
+            this.lblArea.AutoSize = true;
+            this.lblArea.Location = new System.Drawing.Point(7, 16);
+            this.lblArea.Name = "lblArea";
+            this.lblArea.Size = new System.Drawing.Size(35, 13);
+            this.lblArea.TabIndex = 2;
+            this.lblArea.Text = "Area :";
             // 
             // grbCanvas
             // 
             this.grbCanvas.Controls.Add(this.picCanvas);
             this.grbCanvas.Location = new System.Drawing.Point(198, 13);
             this.grbCanvas.Name = "grbCanvas";
-            this.grbCanvas.Size = new System.Drawing.Size(378, 219);
+            this.grbCanvas.Size = new System.Drawing.Size(315, 219);
             this.grbCanvas.TabIndex = 3;
             this.grbCanvas.TabStop = false;
             this.grbCanvas.Text = "Canvas";
@@ -157,26 +162,57 @@ namespace RegularGeometricFigures
             // 
             this.picCanvas.Location = new System.Drawing.Point(6, 19);
             this.picCanvas.Name = "picCanvas";
-            this.picCanvas.Size = new System.Drawing.Size(366, 194);
+            this.picCanvas.Size = new System.Drawing.Size(303, 194);
             this.picCanvas.TabIndex = 0;
             this.picCanvas.TabStop = false;
             // 
             // btnCalculate
             // 
-            this.btnCalculate.Location = new System.Drawing.Point(13, 233);
+            this.btnCalculate.Location = new System.Drawing.Point(6, 19);
             this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(75, 23);
+            this.btnCalculate.Size = new System.Drawing.Size(65, 23);
             this.btnCalculate.TabIndex = 4;
             this.btnCalculate.Text = "Calculate";
             this.btnCalculate.UseVisualStyleBackColor = true;
             this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
+            // grbButtons
+            // 
+            this.grbButtons.Controls.Add(this.btnExit);
+            this.grbButtons.Controls.Add(this.btnRestart);
+            this.grbButtons.Controls.Add(this.btnCalculate);
+            this.grbButtons.Location = new System.Drawing.Point(520, 13);
+            this.grbButtons.Name = "grbButtons";
+            this.grbButtons.Size = new System.Drawing.Size(80, 219);
+            this.grbButtons.TabIndex = 5;
+            this.grbButtons.TabStop = false;
+            // 
+            // btnRestart
+            // 
+            this.btnRestart.Location = new System.Drawing.Point(6, 98);
+            this.btnRestart.Name = "btnRestart";
+            this.btnRestart.Size = new System.Drawing.Size(65, 23);
+            this.btnRestart.TabIndex = 5;
+            this.btnRestart.Text = "Restart";
+            this.btnRestart.UseVisualStyleBackColor = true;
+            this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(6, 190);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(65, 23);
+            this.btnExit.TabIndex = 6;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(590, 263);
-            this.Controls.Add(this.btnCalculate);
+            this.ClientSize = new System.Drawing.Size(607, 240);
+            this.Controls.Add(this.grbButtons);
             this.Controls.Add(this.grbCanvas);
             this.Controls.Add(this.grbSolution);
             this.Controls.Add(this.grbNSides);
@@ -193,6 +229,7 @@ namespace RegularGeometricFigures
             this.grbSolution.PerformLayout();
             this.grbCanvas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).EndInit();
+            this.grbButtons.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -212,6 +249,9 @@ namespace RegularGeometricFigures
         private System.Windows.Forms.GroupBox grbCanvas;
         private System.Windows.Forms.PictureBox picCanvas;
         private System.Windows.Forms.Button btnCalculate;
+        private System.Windows.Forms.GroupBox grbButtons;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnRestart;
     }
 }
 

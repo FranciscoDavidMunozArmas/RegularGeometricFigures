@@ -48,7 +48,7 @@ namespace RegularGeometricFigures.Controller
         }
         public void GraphShape(PictureBox picCanvas)
         {
-            base.GraphShape(picCanvas, 3, Color.Blue);
+            base.GraphShape(picCanvas, 3, Color.CadetBlue);
             for (int i = 0; i < this.numberSides; i++)
             {
                 PointF start = new PointF(this.size + (this.size * (float)Math.Cos((2*Math.PI)/numberSides * i)), this.size + (this.size * (float)Math.Sin((2 * Math.PI) / numberSides * i)));

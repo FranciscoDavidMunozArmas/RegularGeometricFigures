@@ -28,6 +28,30 @@ namespace RegularGeometricFigures
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
+            FormAction();
+        }
+
+        private void tkbSides_ValueChanged(object sender, EventArgs e)
+        {
+            FormAction();
+        }
+
+        private void btnRestart_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                obj.Initialize(this.txtSize, this.txtPerimeter, this.txtArea, this.picCanvas, this.tkbSides.Value);
+                this.txtSize.Text = "0";
+                tkbSides.Value = tkbSides.Minimum;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void FormAction()
+        {
             try
             {
                 this.picCanvas.Refresh();
@@ -36,6 +60,18 @@ namespace RegularGeometricFigures
                 obj.Area();
                 obj.PrintData(this.txtPerimeter, this.txtArea);
                 obj.GraphShape(this.picCanvas);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                obj.CloseForm(this);
             }
             catch (Exception ex)
             {
