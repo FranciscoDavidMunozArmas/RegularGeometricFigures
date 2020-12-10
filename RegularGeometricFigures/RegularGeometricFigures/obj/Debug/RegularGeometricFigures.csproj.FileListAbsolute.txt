@@ -1,0 +1,10 @@
+C:\Users\USUARIO\Desktop\C#\Semester-IV\RegularGeometricFigures\RegularGeometricFigures\RegularGeometricFigures\obj\Debug\RegularGeometricFigures.csprojAssemblyReference.cache
+C:\Users\USUARIO\Desktop\C#\Semester-IV\RegularGeometricFigures\RegularGeometricFigures\RegularGeometricFigures\obj\Debug\RegularGeometricFigures.Properties.Resources.resources
+C:\Users\USUARIO\Desktop\C#\Semester-IV\RegularGeometricFigures\RegularGeometricFigures\RegularGeometricFigures\obj\Debug\RegularGeometricFigures.csproj.GenerateResource.cache
+C:\Users\USUARIO\Desktop\C#\Semester-IV\RegularGeometricFigures\RegularGeometricFigures\RegularGeometricFigures\obj\Debug\RegularGeometricFigures.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Desktop\C#\Semester-IV\RegularGeometricFigures\RegularGeometricFigures\RegularGeometricFigures\bin\Debug\RegularGeometricFigures.exe.config
+C:\Users\USUARIO\Desktop\C#\Semester-IV\RegularGeometricFigures\RegularGeometricFigures\RegularGeometricFigures\bin\Debug\RegularGeometricFigures.exe
+C:\Users\USUARIO\Desktop\C#\Semester-IV\RegularGeometricFigures\RegularGeometricFigures\RegularGeometricFigures\bin\Debug\RegularGeometricFigures.pdb
+C:\Users\USUARIO\Desktop\C#\Semester-IV\RegularGeometricFigures\RegularGeometricFigures\RegularGeometricFigures\obj\Debug\RegularGeometricFigures.Form1.resources
+C:\Users\USUARIO\Desktop\C#\Semester-IV\RegularGeometricFigures\RegularGeometricFigures\RegularGeometricFigures\obj\Debug\RegularGeometricFigures.exe
+C:\Users\USUARIO\Desktop\C#\Semester-IV\RegularGeometricFigures\RegularGeometricFigures\RegularGeometricFigures\obj\Debug\RegularGeometricFigures.pdb
